@@ -1,0 +1,44 @@
+<a routerLink="/asesor/crear-mascota" class="btn">Nuevo Cliente</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>FOTO</th>
+            <th>ESTADO</th>
+            <th>ESPECIE</th>
+            <th>COMENTARIO</th>
+            <th></th>
+            <th></th>
+            <th>opciones</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of listadoRegistrosMascotas">
+            <td>
+                {{m.id}}
+            </td>
+            <td>
+                {{m.Nombre}}
+            </td>
+            <td>
+               <img src="{{m.Foto}}" class="imgMascota" > 
+            </td>
+            <td>
+                {{m.Estado}}
+            </td>
+            <td>
+                {{m.Especie}}
+            </td>
+            <td>
+                {{m.Comentario}}
+            </td>
+            <td>
+              <a routerLink="/asesor/editar-Mascota/{{m.id}}" class="btn"> Editar</a>
+            </td>
+           
+        </tr>
+
+    </tbody>
+</table>

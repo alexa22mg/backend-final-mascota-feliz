@@ -1,0 +1,32 @@
+<body>
+    <div class="container">
+   <form  [formGroup]="fgValidador" (ngSubmit)="GuardarMascota()" class="row g-3 needs-validation" novalidate>
+           <b class="titulo"> Registro Mascota</b>    
+       <div class="col-md-4">
+           <label class="inf" for="nombre" class="form-label">Nombre Mascota</label>
+           <input formControlName="nombre" type="text" class="form-control" id="nombre" required>
+       </div>
+       <div class="col-md-4">
+           <label for="especie" class="form-label">Especie</label>
+           <input  formControlName="especie" type="text" class="form-control" id="txtNombre" required>
+       </div>
+       <div class="col-md-4">
+           <label for="estado" class="form-label">Estado</label>
+           <input formControlName="estado" type="text" class="form-control" id="txtApellido" required>
+       </div>
+       <div class="col-md-4">
+           <label for="comentario" class="form-label">Comentario</label>
+           <input formControlName="comentario" type="text" class="form-control" id="txtTelefono" required>
+       </div>
+       <div class="col-md-4">
+        <label for="foto" class="form-label">Foto</label>
+        <input formControlName="foto" type="text" class="form-control" id="txtTelefono" required>
+    </div>
+       <br>
+       <div class="col-12">
+           <button [disabled]="!fgValidador.valid" class="btn btn-primary" type="submit">Enviar</button>
+       </div>
+   </form>
+   </div>
+       
+   </body>
